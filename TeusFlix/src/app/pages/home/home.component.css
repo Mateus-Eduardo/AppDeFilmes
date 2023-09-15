@@ -1,33 +1,48 @@
-/* Estilo para limitar o carousel ao tamanho máximo da tela */
-.carousel-inner {
-    max-height: 100vh;
+
+.carousel-inner{
+  max-height: 100vh;
   }
   
-  /* Estilo para ajustar a imagem no carousel */
-  .carousel-inner .carousel-item img {
-    max-height: 100vh;
-    object-fit: cover;
+  .carousel-inner .carousel-item img{
+  max-height: 100vh;
+  object-fit: cover;
   }
-  
-  /* Estilos para a legenda do carousel */
-  .carousel-caption {
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
+  .carousel-caption{
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+  width: 100%;
+  left: 0;
+  padding-left: 100px;
+  padding-right: 100px;
+  }
+  .carousel-caption h2{
+  color: #E50914;
+  font-weight: bolder;
+  font-size: 30px;
+  }
+  .carousel-caption p{
+  color: #ffffff;
+  }
+  .rowposter{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    }
+    .rowimg {
+    max-height: 250px;
+    object-fit: contain;
     width: 100%;
-    left: 0;
-    padding-left: 100px;
-    padding-right: 100px;
-  }
-  
-  /* Estilos para o título da legenda */
-  .carousel-caption h5 {
-    color: #E50914;
-    font-weight: bold;
-    font-size: 30px;
-  }
-  
-  /* Estilos para o texto da legenda */
-  .carousel-caption p {
-    color: #ffffff;
-  }
-  
+    box-sizing: content-box;
+    transition: transform 450ms;
+    margin-right: 7px;
+    }
+    .rowimg:hover{
+    transform: scale(1.10);
+    cursor: pointer;
+    }
+    .largeposter{
+    max-height: 300px;
+    }
+    .rowposter::-webkit-scrollbar{
+    display: none;
+    }
