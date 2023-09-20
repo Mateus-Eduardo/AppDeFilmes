@@ -1,1 +1,22 @@
-<p>search works!</p>
+<div class="container mt-5 pt-5">
+    <form [formGroup]="searchForm" (ngSubmit)="submitForm()">
+    <div class="input-group mb-3">
+    <input type="text" class="form-control"
+    formControlName="movieName"
+    placeholder="Pesquisar Filme...">
+    <button class="btn btn-danger" type="submit">Pesquisar</button>
+    </div>
+    </form>
+    <div class="row mt-5">
+    <div class="col-lg-4" *ngFor="let s of searchResult">
+    <div id="movie" class="row" [routerLink]="['/movie',s.id]">
+    <div class="col-lg-3 my-3" *ngIf="s.poster_path">
+    <img src="https://image.tmdb.org/t/p/original/{{s.poster_path}}">
+    </div>
+    <div id="details" class="col-lg-9 my-3">
+    <h5>{{s.title}}</h5>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
